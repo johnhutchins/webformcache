@@ -1,15 +1,20 @@
+let firstNameInput = document.getElementById('firstName')
+let lastNameInput = document.getElementById('lastName')
+
 function setLocalStorageOnBlur(){
-    let firstNameInput = document.getElementById('firstName')
-    let lastNameInput = document.getElementById('lastName')
-
-    console.log("Did somethig on blur")
-    
     localStorage.setItem('FirstNameInput',firstNameInput.value)
-
-    console.log(firstNameInput.value)
-
+    localStorage.setItem('LastNameInput',lastNameInput.value)
 }
 
 function showLocalStorage(){
     console.log(localStorage.getItem('FirstNameInput'))
+    console.log(localStorage.getItem('LastNameInput'))
+}
+
+function addLocalStoreItemsToInput(){
+    let first = localStorage.getItem('FirstNameInput')
+    let last = localStorage.getItem('LastNameInput')
+ 
+    firstNameInput.innerText = first;
+    lastNameInput.innerText = last;
 }

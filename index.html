@@ -12,11 +12,12 @@
     <div class='main'>
         <form>
         First name:<br>
-        <input id='firstName' type="text" name="firstname" onblur='setLocalStorageOnBlur()'><br>
+        <input id='firstName' type="text" onblur='setLocalStorageOnBlur()'><br>
         Last name:<br>
-        <input id='lastName' type="text" name="lastname">
+        <input id='lastName' type="text" onblur='setLocalStorageOnBlur()'>
         </form>
         <button onclick='showLocalStorage()'>Show local storage</button>
+        <button onclick='addLocalStoreItemsToInput()'>Local storage items to form</button>
     </div>
 
     
