@@ -14,7 +14,7 @@ function showLocalStorage(){
 function addLocalStoreItemsToInput(){
     let first = localStorage.getItem('FirstNameInput')
     let last = localStorage.getItem('LastNameInput')
- 
-    firstNameInput.innerText = first;
-    lastNameInput.innerText = last;
+
+    firstNameInput.value = first;
+    lastNameInput.value = last;
 }

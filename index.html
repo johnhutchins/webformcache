@@ -9,16 +9,19 @@
     </head>
   <body>
   
-    <div class='main'>
-        <form>
+
+    <form class='main'>
         First name:<br>
         <input id='firstName' type="text" onblur='setLocalStorageOnBlur()'><br>
         Last name:<br>
-        <input id='lastName' type="text" onblur='setLocalStorageOnBlur()'>
-        </form>
+        <input id='lastName' type="text" onblur='setLocalStorageOnBlur()'><br>
+
+    </form>
+    <div class='main'>
         <button onclick='showLocalStorage()'>Show local storage</button>
         <button onclick='addLocalStoreItemsToInput()'>Local storage items to form</button>
     </div>
+
 
     
 
