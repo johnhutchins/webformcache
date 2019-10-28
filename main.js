@@ -18,3 +18,11 @@ function addLocalStoreItemsToInput(){
     firstNameInput.value = first;
     lastNameInput.value = last;
 }
+
+
+function aggregate(){
+    let formObj = {}
+    formObj.FirstName = document.getElementsByTagName('input')[0].value
+    formObj.LastName = document.getElementsByTagName('input')[1].value
+    console.log("form object === " + JSON.stringify(formObj))
+}
