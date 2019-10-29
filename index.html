@@ -1,31 +1,349 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <title>5e CharacterSheet</title>
+</head>
 
-    <link rel='stylesheet' href='./style.css'>
-    </head>
-  <body>
-  
+<body>
 
-    <form class='main'>
-        First name:<br>
-        <input id='firstName' type="text" onblur='setLocalStorageOnBlur()'><br>
-        Last name:<br>
-        <input id='lastName' type="text" onblur='setLocalStorageOnBlur()'><br>
-
-    </form>
-    <div class='main'>
-        <button onclick='showLocalStorage()'>Show local storage</button>
-        <button onclick='addLocalStoreItemsToInput()'>Local storage items to form</button>
-        <button onclick="aggregate()">Aggregate</button>
+    <div class="title">
+        <h1>
+            <input type="text" name="name" placeholder="Character name">
+            <!--top left-->
+        </h1>
     </div>
+    <br>
+    <div class="playerInfo">
+        <!--Player info:  style to be uniform, top right-->
+        <h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Class/Level: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>Background: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>Player Name: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="playerInfo2">
+                <tbody>
+                    <tr>
+                        <td>Race: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>Alignment: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>EXP: </td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
 
+        </h4>
+    </div>
+    <div class="abilityscore">
+        <!-- along left column-->
 
-    
+        <label for="strength">Strength</label> <br>
+        <input type="number" name="strength">
+        <br>
+        <input type="number" name="strength">
+        <br>
+        <label for="Dexterity">Dexterity</label>
+        <br>
+        <input type="number" name="Dexterity">
+        <br>
+        <input type="number" name="Dexterity">
+        <br>
+        <label for="constitution">Constitution</label> <br>
+        <input type="number" name="constitution">
+        <br>
+        <input type="number" name="constitution">
+        <br>
+        <label for="intelligence">Intelligence</label> <br>
+        <input type="number" name="intelligence">
+        <br>
+        <input type="number" name="intelligence">
+        <br>
+        <label for="wisdom">Wisdom</label> <br>
+        <input type="number" name="wisdom">
+        <br>
+        <input type="number" name="wisdom">
+        <br>
+        <label for="charisma">Charisma</label> <br>
+        <input type="number" name="charisma">
+        <br>
+        <input type="number" name="charisma">
 
-    <script src='./main.js'></script>
-  </body>
+    </div>
+    <br>
+    <div id="inspiration">
+        <label for="inspiration">Inspiration:</label>
+        <input type="checkbox" name="inspiration">
+        <label for="proficiencybonus" id="proficiencybonus">Proficiency Bonus</label>
+        <input type="number" name="proficiencybonus">
+    </div>
+    <br>
+    <div id="savingthrows">
+        <h4>Saving Throws</h4>
+        <label for="savingthrows">Strength</label>
+        <input type="checkbox">
+        <input type="number" name="strength">
+        <br>
+        <label for="savingthrows">Dexterity</label>
+        <input type="checkbox">
+        <input type="number" name="Dexterity">
+        <br>
+        <label for="savingthrows">Constitution</label>
+        <input type="checkbox">
+        <input type="number" name="Constitution">
+        <br>
+        <label for="savingthrows">Intelligence</label>
+        <input type="checkbox">
+        <input type="number" name="Intelligence">
+        <br>
+        <label for="savingthrows">Wisdom</label>
+        <input type="checkbox">
+        <input type="number" name="Wisdom">
+        <br>
+        <label for="savingthrows">Charisma</label>
+        <input type="checkbox">
+        <input type="number" name="Charisma">
+    </div>
+    <br>
+    <section>
+    <div id="skills">
+        <h4>Skills</h4>
+        <label for="skills">Acrobatics(dex)</label>
+        <input type="checkbox">
+        <input type="number" name="acrobatics">
+        <br>
+        <label for="skills">Animal Handling(wis)</label>
+        <input type="checkbox">
+        <input type="number" name="animalhandling">
+        <br>
+        <label for="skills">Arcana(int)</label>
+        <input type="checkbox">
+        <input type="number" name="arcana">
+        <br>
+        <label for="skills">Athletics(str)</label>
+        <input type="checkbox">
+        <input type="number" name="athletics">
+        <br>
+        <label for="skills">Deception(Cha)</label>
+        <input type="checkbox">
+        <input type="number" name="deception">
+        <br>
+        <label for="skills">History(int)</label>
+        <input type="checkbox">
+        <input type="number" name="history">
+        <br>
+        <label for="skills">Insight(wis)</label>
+        <input type="checkbox">
+        <input type="number" name="insight">
+        <br>
+        <label for="skills">Intimidation(cha)</label>
+        <input type="checkbox">
+        <input type="number" name="intimidation">
+        <br>
+        <label for="skills">Investigation(int)</label>
+        <input type="checkbox">
+        <input type="number" name="investigation">
+        <br>
+        <label for="skills">Medicine(wis)</label>
+        <input type="checkbox">
+        <input type="number" name="medicine">
+        <br>
+        <label for="skills">Nature(int)</label>
+        <input type="checkbox">
+        <input type="number" name="nature">
+        <br>
+        <label for="skills">Perception(wis)</label>
+        <input type="checkbox">
+        <input type="number" name="perception">
+        <br>
+        <label for="skills">Performance(cha)</label>
+        <input type="checkbox">
+        <input type="number" name="performance">
+        <br>
+        <label for="skills">Persuasion(cha)</label>
+        <input type="checkbox">
+        <input type="number" name="persuasion">
+        <br>
+        <label for="skills">Religion(int)</label>
+        <input type="checkbox">
+        <input type="number" name="religion">
+        <br>
+        <label for="skills">Sleight of Hand(dex)</label>
+        <input type="checkbox">
+        <input type="number" name="sleightofhand">
+        <br>
+        <label for="skills">Stealth(dex)</label>
+        <input type="checkbox">
+        <input type="number" name="stealth">
+        <br>
+        <label for="skills">Survival(wis)</label>
+        <input type="checkbox">
+        <input type="number" name="survival">
+        <br>
+
+    </div>
+    <br>
+    <div id="AC/Init/Speed">
+        <label for="armorclass">Armor Class (AC)</label>
+        <input type="number" name="armorclass">
+        <label for="initiative">Initiative</label>
+        <input type="number" name="initiative">
+        <label for="speed">Speed</label>
+        <input type="number" name="speed">
+    </div>
+    <br>
+    <div id="hitpoints">
+        <h4>Hit Points</h4>
+        <label for="maxhp">Max HP</label>
+        <input type="number" name="maxhp">
+        <label for="hitpoints">Current HP</label>
+        <input type="number" name="hitpoints">
+        <br>
+        <label for="temphp">Temporary HP</label>
+        <input type="number" name="temphp">
+        <br>
+        <h4>Hit Dice</h4>
+        <label for="totalhitdice">Total</label>
+        <input type="number" name="totalhitdice">
+        <label for="hitdice">Current</label>
+        <input type="number" name="hitdice">
+        <label for="hitdicesize">Hit Dice Size</label>
+        <input type="text" name="hitdice">
+    </div>
+    <br>
+    </section>
+    <div id="deathsaves">
+        <h4>Death Saves</h4>
+        <label for="deathsaves">Successes</label>
+        <input type='checkbox' name=successes>
+        <input type='checkbox' name=successes>
+        <input type='checkbox' name=successes>
+        <br>
+        <label for="deathsaves">Failures</label>
+        <input type='checkbox' name=failures>
+        <input type='checkbox' name=failures>
+        <input type='checkbox' name=failures>
+    </div>
+<section>
+    <div class="table">
+        <table>
+
+            <tbody>
+                <Caption>Attacks and Spellcasting</Caption>
+                <th>Name</th>
+                <th>Attack Bonus</th>
+                <th>Damage/Type</th>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="table">
+        <table>
+            <tbody>
+                <Caption>Equipment</Caption>
+                <th>Name</th>
+                <th>Quantity</th>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+                <tr>
+                    <td contenteditable='true'></td>
+                    <td contenteditable='true'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+    <div id="money">
+        <label for="money">Platinum</label>
+        <input type="number">
+        <br>
+        <label for="money">Gold</label>
+        <input type="number">
+        <br>
+        <label for="money">Silver</label>
+        <input type="number">
+        <br>
+        <label for="money">Copper</label>
+        <input type="number">
+    </div>
+    <br>
+    <div id="traits">
+        <label for="personality">Personality</label>
+        <textarea cols="50" rows="5" id="personality" name="personality"></textarea>
+        <br>
+        <label for="ideals">Ideals</label>
+        <textarea cols="50" rows="5"></textarea>
+        <br>
+        <label for="bonds">Bonds</label>
+        <textarea cols="50" rows="5"></textarea>
+        <br>
+        <label for="flaws">Flaws</label>
+        <textarea cols="50" rows="5"></textarea>
+        <br>
+        <label for="features and traits">Features and Traits: </label>
+        <textarea rows="15" cols="50" id="features and traits" name="features and traits"></textarea>
+
+    </div>
+</body>
+
 </html>
